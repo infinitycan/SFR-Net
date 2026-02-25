@@ -1,0 +1,17 @@
+Branch pipe failed inspection and was directly connected laterally to the main pipe.
+Denotes a defect where pipe diameter changes inconsistently or improperly.
+Pipe deformed by external compression.
+Two pipe outlets at the same joint have a lateral deviation and are not in the correct position within the pipeline.
+Object not belonging to the piping system penetrates the pipe wall and enters the pipe interior.
+Pipe inner wall corroded, material lost or spalled, showing pitting or exposed rebar.
+Deposits on the inner wall of the pipe.
+External pressure exceeding the pipe's tolerance caused the pipe to rupture.
+Two pipe outlets at the same joint have a longitudinal deviation, not in the correct position within the pipeline.
+Water from outside the pipe flows into the pipe.
+Ends of two pipes are not fully joined or the joint has detached.
+Obstruction inside the pipe affecting water flow.
+Temporary brick wall built for pipe water tightness test, left unremoved or incompletely removed after the test.
+Floating objects on the water surface inside the pipe.
+Joint materials such as rubber rings, asphalt, or cement entering the pipe.
+Single root or root mass naturally grown into the pipe.
+Impurities settled and accumulated at the bottom of the pipe.

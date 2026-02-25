@@ -1,0 +1,17 @@
+A CCTV view of a concrete pipe wall, showing a clear, dark fracture line with visible displacement or separation of the pipe material, indicating a break rather than a simple surface crack.
+A close-up view of a concrete pipe's inner surface where the smooth finish has worn away, exposing the rough aggregate material underneath due to abrasion or chemical corrosion.
+An image of a pipe where the end is malformed and not perfectly circular, or a joint where the gasket is improperly seated and visibly pinched or extruded.
+A view from an inspection camera showing a loss of the pipe's original circular cross-section, evidenced by a sagging at the crown (top) or a flattening at the invert (bottom).
+A view of a pipe joint showing a vertical or horizontal step (offset) between adjacent pipe sections, creating a lip that can impede flow and catch debris.
+An image showing a mass of tree roots, ranging from fine, hair-like fibers to thick, woody structures, penetrating the pipe through a visible defect such as a joint or crack.
+An image showing a stream of water or a trail of moisture with associated stains entering the pipe from a joint or crack, often carrying fine soil particles.
+A view of the pipe invert (bottom) which is covered by a layer of loose debris, such as sand, sludge or gravel, reducing the cross-sectional area available for flow.
+A view of the pipe wall, typically above the normal water line, covered by a hardened, crust-like layer of grease, scale, or other congealed material.
+A standard view of a main sewer line showing a properly formed, open lateral connection entering the main pipe.
+An image of a main pipe with a crudely formed, irregular opening for a lateral connection, with jagged edges and often surrounded by excess mortar.
+A view of a lateral connection that has been visibly altered from its original design, typically with hand-applied mortar or concrete creating a bulky, non-uniform shape.
+A view of a main pipe with a clean, machine-cored circular hole for a lateral connection, often fitted with a manufactured saddle.
+An image of a pipe joint where a continuous, uniform ring of sealing material (gasket) protrudes into the pipe, distinct from irregular blockages.
+A view of a lateral connection that incorporates a molded, funnel-shaped transition piece (e.g., a 'tee' or 'wye' fitting) to ensure smooth hydraulic flow.
+An image showing a discrete, foreign object, such as a rock, brick, or piece of construction debris, resting inside the pipe and impeding flow.  
+Inside a CIPP-lined pipe, a view of the location where the new liner has been robotically cut to smoothly reopen a pre-existing lateral connection.

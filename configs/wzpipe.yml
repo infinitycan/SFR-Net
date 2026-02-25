@@ -1,0 +1,73 @@
+MODEL:
+  NAME: 'SFRNet'
+  IF_LABELSMOOTH: 'off'
+  IF_WITH_CENTER: 'no'
+  NO_MARGIN: True
+  STRIDE_SIZE: [16, 16]
+  BACKBONE: 'ViT-B/16'
+  LOSS_TYPE: 'SCL'
+  PROMPT_CSC: False
+  TRANSFER_TYPE: "Adapter"
+  SAA_LAYER: [12, -1]
+  USE_EMA: False
+  KERNEL_SIZE: 3
+  TEMPERATURE: 2e-3
+  OT_REGSC: 0.05
+  DIST_TRAIN: True
+  TOPK: 16
+  LOAD: False
+  RS_LAYERS: [-1]
+  BOTTLENECK_DIM: 128
+
+INPUT:
+  SIZE_TRAIN: [224, 224]
+  SIZE_TEST: [224, 224]
+  PROB: 0.5
+  RE_PROB: 0.5
+  PADDING: 10
+  PIXEL_MEAN: [0.5, 0.5, 0.5]
+  PIXEL_STD: [0.5, 0.5, 0.5]
+  ENSEMBLE_TYPE: "embedding"
+  NUM_GROUPS: 1
+  TEXT_DESC: 'wzpipe_de.txt'
+  EXP_PHASE: 'wzpipe_ep.txt'
+
+DATASETS:
+  NAMES: ('WZPipe')
+  ROOT_DIR: ('/samsung_ssd/WZ-Pipe/')
+  NUMBERS: 17
+  TYPE: 'Normal'
+
+DATALOADER:
+  SAMPLER: 'sigmoid'
+  NUM_INSTANCE: 4
+  NUM_WORKERS: 4
+
+SOLVER:
+  OPTIMIZER_NAME: 'AdamW'
+  BASE_LR: 5e-5
+  BASE_LR_SGD: 1e-3
+  IMS_PER_BATCH: 896
+  LARGE_FC_LR: False
+  LOG_PERIOD: 200
+  CHECKPOINT_PERIOD: 10
+  WEIGHT_DECAY: 1e-4
+  MAX_EPOCHS: 10
+  EVAL_PERIOD: 1
+  SAVE_MODEL: True
+  SEED: 42
+
+
+TEST:
+  EVAL: False
+  IMS_PER_BATCH: 896
+  RE_RANKING: False
+  WEIGHT: ''
+  WEIGHT_ITERS: 12800
+  NECK_FEAT: 'before'
+  FEAT_NORM: 'yes'
+
+
+OUTPUT_DIR: './logs/WZPipe'
+WANDB_PROJ: 'SFRNet'
+WANDB: False

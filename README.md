@@ -1,0 +1,54 @@
+# SFR-Net: Steering-Fusion-Refining Network in Multi-label Zero-Shot Sewer Defect Detection
+
+Official implementation of the [paper](https://openreview.net/forum?id=u2iaMfTuxR&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3Dthecvf.com%2FCVPR%2F2026%2FConference%2FAuthors%23your-submissions)) in CVPR 2026.
+
+## Introduction
+
+Addressing the prohibitive costs of data annotation and the scarcity of sewer defect samples, we propose **SFR-Net**, a novel Multi-Label Zero-Shot Learning (ML-ZSL) framework. To mitigate "Alignment Ambiguity" in complex pipe environments, SFR-Net employs a three-stage paradigm: **Representation Steering (RS)** for scene adaptation, **Multi-Granularity Evidence Fusion (MEF)** for decoupled feature aggregation, and **Generalized Relational Score Refining (GR)** for transferring relational logic to unseen defects. Experiments on the Sewer-ML and WZ-Pipe datasets demonstrate that SFR-Net achieves state-of-the-art (SOTA) performance and significantly boosts zero-shot generalization.
+
+![framework](src/framework.png)
+
+## Installation
+
+### Datasets
+
+#### Sewer-ML
+
+a large-scale, multi-label benchmark dataset specifically designed for **sewer pipe defect classification**. It contains over **1.3 million images** with **17 distinct defect categories**. We select the five least-frequent categories as the unseen defects, ensuring no
+corresponding samples exist in the training set.
+
+ [[Paper]](https://openaccess.thecvf.com/content/CVPR2021/papers/Haurum_Sewer-ML_A_Multi-Label_Sewer_Defect_Classification_Dataset_and_Benchmark_CVPR_2021_paper.pdf) [[Dataset]](https://vap.aau.dk/sewer-ml/)
+
+#### WZ-Pipe
+
+a distinct dataset that employs different inspection standards from **Sewer-ML**. Specifically, the standards followed by **WZ-Pipe** feature more detailed and well-defined defect categories. It comprises approximately **60,000 samples** across **17 categories**, with the partition of unseen classes remaining consistent with that of Sewer-ML to ensure experimental comparability.
+
+ [[Google Driver]]() [[Baidu Netdisk]]()
+
+### Enviroment
+
+Install the environment through conda:
+
+```shell
+conda env create -f environment.yml
+```
+
+## Running
+
+### Multi-GPU training
+
+```shell
+CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --nproc_per_node=4 --master_addr=localhost --master_port=12355 \
+main_mlzsl.py --config_file configs/sewerml.yml
+```
+
+### Multi-GPU evaluation
+
+```shell
+CUDA_VISIBLE_DEVICES=0,1,2,3 torchrun --nproc_per_node=4 --master_addr=localhost --master_port=12355 \
+main_mlzsl.py --config_file configs/sewerml.yml MODEL.LOAD True TEST.EVAL True TEST.WEIGHT best.pth
+```
+
+## Acknowledgements
+
+This repo benefits from [RAM](https://github.com/muzairkhattak/multimodal-prompt-learning), [CLIP](https://github.com/xmed-lab/CLIP_Surgery) and [CLIP-Adapter](https://github.com/gaopengcuhk/CLIP-Adapter). Thanks for their wonderful works.
