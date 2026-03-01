@@ -187,3 +187,5 @@ datasets/sample
 
 result/
 .DS_Store
+
+sewerml_best.pth

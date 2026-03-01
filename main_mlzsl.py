@@ -95,7 +95,7 @@ def main(cfg):
     # 5. Start testing or training 
     if cfg.TEST.EVAL and cfg.MODEL.LOAD:
         if is_main_process():
-            print("DDP evaluation only mode. Skipping training.")
+            print("evaluation only mode. Skipping training.")
         do_test(cfg, model, val_loader, val_loader_gzsl, class_matrix, local_rank)
     else:
         do_train(cfg, model, train_loader, val_loader, val_loader_gzsl, class_matrix,

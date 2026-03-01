@@ -123,7 +123,7 @@ def make_dataloader(cfg):
             persistent_workers=True,
         )
 
-        if thread_flag(cfg.MODEL.DIST_TRAIN):
+        if is_main_process():
             print('Data Loading Done!')
 
         return train_loader, val_loader, val_loader_gzsl, None, dataset
