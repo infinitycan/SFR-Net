@@ -17,7 +17,8 @@ Addressing the prohibitive costs of data annotation and the scarcity of sewer de
 a large-scale, multi-label benchmark dataset specifically designed for **sewer pipe defect classification**. It contains over **1.3 million images** with **17 distinct defect categories**. We select the five least-frequent categories as the unseen defects, ensuring no
 corresponding samples exist in the training set.
 
- [[Paper]](https://openaccess.thecvf.com/content/CVPR2021/papers/Haurum_Sewer-ML_A_Multi-Label_Sewer_Defect_Classification_Dataset_and_Benchmark_CVPR_2021_paper.pdf) [[Dataset]](https://vap.aau.dk/sewer-ml/)
+[[Dataset]](https://vap.aau.dk/sewer-ml/)
+ [[Split]](https://drive.google.com/drive/folders/1f1v4uqJxapUtqDqL4ipffOzZOMV8NHle?usp=drive_link)
 
 #### WZ-Pipe
 
@@ -25,7 +26,7 @@ a distinct dataset that employs different inspection standards from **Sewer-ML**
 
 Download the dataset from the following links:
 
- [[Google Driver]]() [[Baidu Netdisk]]()
+ [[Google Driver]]() [[Baidu Netdisk]](https://pan.baidu.com/s/1jkgmBJvQ9IR3abE_7nngIg?pwd=cvpr)
 
 **Note on Dataset Versioning**
 

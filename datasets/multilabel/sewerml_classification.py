@@ -10,9 +10,9 @@ class SewerMLZSMultiLabelClassification(BaseImageDataset):
         super(SewerMLZSMultiLabelClassification, self).__init__()
         self.dataset_dir = root
         dataset_name = "SewerML"
-        self.train_file = os.path.join(self.dataset_dir, 'ZS', 'train.csv')
-        self.test_file = os.path.join(self.dataset_dir, 'ZS', 'test.csv')
-        self.test_file_gzsl = os.path.join(self.dataset_dir, 'ZS', 'test.csv')
+        self.train_file = os.path.join(self.dataset_dir, 'sewerml_train.csv')
+        self.test_file = os.path.join(self.dataset_dir, 'sewerml_test.csv')
+        self.test_file_gzsl = os.path.join(self.dataset_dir, 'sewerml_test.csv')
 
         self.seen_defect_classes = self._load_defects_from_file(type='seen')
         self.unseen_defect_classes = self._load_defects_from_file(type='unseen')
