@@ -33,10 +33,14 @@ Download the dataset from the following links:
 The current release is a refined version of the dataset reported in the paper. We have performed a second round of re-annotation and removed low-quality or privacy-sensitive samples for better usability and safety.
 
 **Result on refined WZ-Pipe Dataset**
-| | | | | | | | | | | | | | | | |
-|----|----|----|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| Method | P@1 | R@1 | F1@1 | P@3 | R@3 | F1@3 | mAP | P@3 | R@3 | F1@3 | P@5 | R@5 | F1@5 | mAP |
-| Ours | 5.13 | 13.68 | 7.46 | 6.55 | 52.42 | 11.65 | 8.25 | 26.72 | 54.23 | 35.80 | 19.74 | 66.76 | 30.47 | 26.06 |
+
+| Setting | P@1 | R@1 | F1@1 | P@3 | R@3 | F1@3 | mAP |
+|----|-----|-----|------|-----|-----|------|-----|
+| ZSL   | 5.13| 13.68| 7.46 | 6.55| 52.42| 11.65| 8.25|
+
+| Method | P@3 | R@3 | F1@3 | P@5 | R@5 | F1@5 | mAP |
+|--------|-----|-----|------|-----|-----|------|-----|
+| GZSL   | 26.72| 54.23| 35.80| 19.74| 66.76| 30.47| 26.06|
 
 ### ⚙️ Enviroment
 
