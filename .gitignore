@@ -181,7 +181,7 @@ checkpoints/
 .vscode/
 
 # logging files
-# logs/
+logs/
 
 datasets/sample
 

@@ -71,13 +71,13 @@ class WZPipeZSMultiLabelClassification(BaseImageDataset):
             else:
                 classes = self.defect_labels
 
-            annotation = dd.read_csv(annot_path, sep=',', usecols= classes + ["Filename"])
+            annotation = dd.read_csv(annot_path, sep=',', usecols= classes + ["filename"])
             annotation = annotation.compute()
             class_to_idx = {classes[i]: i for i in range(len(classes))}
-            images_paths = annotation['Filename']
-            annotation_dict = annotation.set_index('Filename')[classes].to_dict(orient='index')
+            images_paths = annotation['filename']
+            annotation_dict = annotation.set_index('filename')[classes].to_dict(orient='index')
             for img_path in images_paths:
-                full_image_path = os.path.join(data_dir, 'img_224', img_path)
+                full_image_path = os.path.join(data_dir, 'masked', img_path)
                 labels = np.array(list(annotation_dict.get(img_path, {}).values()))
                 assert full_image_path
                 out_data.append((full_image_path, labels))

@@ -11,10 +11,9 @@ MODEL:
   SAA_LAYER: [12, -1]
   USE_EMA: False
   KERNEL_SIZE: 3
-  TEMPERATURE: 2e-3
+  TEMPERATURE: 0.1
   OT_REGSC: 0.05
   DIST_TRAIN: True
-  TOPK: 16
   LOAD: False
   RS_LAYERS: [-1]
   BOTTLENECK_DIM: 128
@@ -32,6 +31,8 @@ INPUT:
   TEXT_DESC: 'sewerml_de.txt'
   EXP_PHASE: 'sewerml_ep.txt'
   THRESHOLD: 0.85
+  TOP_K_ZSL: [1,3]
+  TOP_K_GZSL: [1,3]
 
 DATASETS:
   NAMES: ('SewerML')

@@ -170,6 +170,10 @@ _C.INPUT.EXP_PHASE = 'sewerml_ep.txt'
 # GR threshold
 _C.INPUT.THRESHOLD = 0.85
 
+# topk for ZSL and GZSL evaluation
+_C.INPUT.TOP_K_ZSL = [1,3]
+_C.INPUT.TOP_K_GZSL = [1, 3]
+
 # -----------------------------------------------------------------------------
 # Dataset
 # -----------------------------------------------------------------------------

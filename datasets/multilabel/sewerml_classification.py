@@ -70,12 +70,12 @@ class SewerMLZSMultiLabelClassification(BaseImageDataset):
             else:
                 classes = self.defect_labels
 
-            annotation = dd.read_csv(annot_path, sep=',', usecols= classes + ["Filename"])
+            annotation = dd.read_csv(annot_path, sep=',', usecols= classes + ["filename"])
             annotation = annotation.compute() 
-            annotation = annotation.dropna(subset=['Filename'])
+            annotation = annotation.dropna(subset=['filename'])
 
             class_to_idx = {classes[i]: i for i in range(len(classes))}
-            images_paths = annotation['Filename'].values
+            images_paths = annotation['filename'].values
             labels_matrix = annotation[classes].values 
 
             for i in range(len(images_paths)):

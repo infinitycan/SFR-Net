@@ -26,11 +26,17 @@ a distinct dataset that employs different inspection standards from **Sewer-ML**
 
 Download the dataset from the following links:
 
- [[Google Driver]]() [[Baidu Netdisk]](https://pan.baidu.com/s/1jkgmBJvQ9IR3abE_7nngIg?pwd=cvpr)
+ [[MEGA]](https://mega.nz/file/61AVQDbC#JWGWyODueoGRv2OV9MwRUvsMuxD4nQyUN5KiLUIxoiM) [[Baidu Netdisk]](https://pan.baidu.com/s/1jkgmBJvQ9IR3abE_7nngIg?pwd=cvpr)
 
 **Note on Dataset Versioning**
 
-The current release is a refined version of the dataset reported in the paper, with low-quality or privacy-sensitive samples removed for better usability and safety.
+The current release is a refined version of the dataset reported in the paper. We have performed a second round of re-annotation and removed low-quality or privacy-sensitive samples for better usability and safety.
+
+**Result on refined WZ-Pipe Dataset**
+| | | | | | | | | | | | | | | | |
+|----|----|----|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Method | P@1 | R@1 | F1@1 | P@3 | R@3 | F1@3 | mAP | P@3 | R@3 | F1@3 | P@5 | R@5 | F1@5 | mAP |
+| Ours | 5.13 | 13.68 | 7.46 | 6.55 | 52.42 | 11.65 | 8.25 | 26.72 | 54.23 | 35.80 | 19.74 | 66.76 | 30.47 | 26.06 |
 
 ### ⚙️ Enviroment
 
@@ -41,9 +47,9 @@ conda env create -f environment.yml
 ```
 
 ### 📦 Pretrained Model
-| Backbone | Dataset  | Resolution| Download | 
-|----------|-----------------------|---------- | ----------|
-| ViT-B/16 | Sewer-ML | 224x224 |[[Google Drive]](https://drive.google.com/file/d/1uSJDR-x-lCZeUSlT5lpJW-J-KH0i74Fv/view?usp=sharing) [[Baidu Netdisk]](https://pan.baidu.com/s/18dF4J-jMvdGbIFafg-6sJQ?pwd=cvpr) |
+| Backbone | Dataset  | Resolution| mAP(ZSL/GZSL) |Download | 
+|----------|-----------------------|---------- | ---------- | ----------|
+| ViT-B/16 | Sewer-ML | 224x224 | 12.58/43.28 |[[Google Drive]](https://drive.google.com/file/d/1uSJDR-x-lCZeUSlT5lpJW-J-KH0i74Fv/view?usp=sharing) [[Baidu Netdisk]](https://pan.baidu.com/s/18dF4J-jMvdGbIFafg-6sJQ?pwd=cvpr) |
 
 ---
 

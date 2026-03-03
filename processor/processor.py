@@ -168,15 +168,15 @@ def do_train(
                 logger.info("ZSL:")
                 logger.info("APs: %s", ", ".join(f"{ap:.3%}" for ap in APs_zsl))
                 logger.info("mAP: {:.3%}".format(mAP_zsl))
-                logger.info("OP_1: {:.3%}, OR_1: {:.3%}, OF1_1: {:.3%}".format(Result_k['OP'], Result_k['OR'], Result_k['OF1']))
-                logger.info("OP_3: {:.3%}, OR_3: {:.3%}, OF1_3: {:.3%}".format(Result_k2['OP'], Result_k2['OR'], Result_k2['OF1']))
+                logger.info("OP_{}: {:.3%}, OR_{}: {:.3%}, OF1_{}: {:.3%}".format(cfg.INPUT.TOP_K_ZSL[0], Result_k['OP'], cfg.INPUT.TOP_K_ZSL[0], Result_k['OR'], cfg.INPUT.TOP_K_ZSL[0], Result_k['OF1']))
+                logger.info("OP_{}: {:.3%}, OR_{}: {:.3%}, OF1_{}: {:.3%}".format(cfg.INPUT.TOP_K_ZSL[1], Result_k2['OP'], cfg.INPUT.TOP_K_ZSL[1], Result_k2['OR'], cfg.INPUT.TOP_K_ZSL[1], Result_k2['OF1']))
                 logger.info("-------------------------------")
                 logger.info("GZSL:")
                 logger.info("Seen APs: %s", ", ".join(f"{ap:.3%}" for ap in APs[:-5]))
                 logger.info("Unseen APs: %s", ", ".join(f"{ap:.3%}" for ap in APs[-5:]))
                 logger.info("mAP: {:.3%}".format(mAP))
-                logger.info("OP_1: {:.3%}, OR_1: {:.3%}, OF1_1: {:.3%}".format(Result_k_gzsl['OP'], Result_k_gzsl['OR'], Result_k_gzsl['OF1']))
-                logger.info("OP_3: {:.3%}, OR_3: {:.3%}, OF1_3: {:.3%}".format(Result_k2_gzsl['OP'], Result_k2_gzsl['OR'], Result_k2_gzsl['OF1']))
+                logger.info("OP_{}: {:.3%}, OR_{}: {:.3%}, OF1_{}: {:.3%}".format(cfg.INPUT.TOP_K_GZSL[0], Result_k_gzsl['OP'], cfg.INPUT.TOP_K_GZSL[0], Result_k_gzsl['OR'], cfg.INPUT.TOP_K_GZSL[0], Result_k_gzsl['OF1']))
+                logger.info("OP_{}: {:.3%}, OR_{}: {:.3%}, OF1_{}: {:.3%}".format(cfg.INPUT.TOP_K_GZSL[1], Result_k2_gzsl['OP'], cfg.INPUT.TOP_K_GZSL[1], Result_k2_gzsl['OR'], cfg.INPUT.TOP_K_GZSL[1], Result_k2_gzsl['OF1']))
                 logger.info("-------------------------------")
 
                 if ema_m is not None:
@@ -265,11 +265,11 @@ def validate(cfg, val_loader, class_matrix, model, device, zsl=True, gzsl=False)
         mAP, APs = compute_map(all_preds_concatenated, all_labels_concatenated)
 
         if zsl:
-            Result_k = multilabel_evaluation(all_preds_concatenated, all_labels_concatenated, k=1)
-            Result_k2 = multilabel_evaluation(all_preds_concatenated, all_labels_concatenated, k=3)
+            Result_k = multilabel_evaluation(all_preds_concatenated, all_labels_concatenated, k=cfg.INPUT.TOP_K_ZSL[0])
+            Result_k2 = multilabel_evaluation(all_preds_concatenated, all_labels_concatenated, k=cfg.INPUT.TOP_K_ZSL[1])
         else:
-            Result_k = multilabel_evaluation(all_preds_concatenated, all_labels_concatenated, k=1)
-            Result_k2 = multilabel_evaluation(all_preds_concatenated, all_labels_concatenated, k=3)
+            Result_k = multilabel_evaluation(all_preds_concatenated, all_labels_concatenated, k=cfg.INPUT.TOP_K_GZSL[0])
+            Result_k2 = multilabel_evaluation(all_preds_concatenated, all_labels_concatenated, k=cfg.INPUT.TOP_K_GZSL[1])
 
         return mAP, APs, Result_k, Result_k2
     else:
