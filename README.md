@@ -26,7 +26,7 @@ a distinct dataset that employs different inspection standards from **Sewer-ML**
 
 Download the dataset from the following links:
 
- [[MEGA]](https://mega.nz/file/61AVQDbC#JWGWyODueoGRv2OV9MwRUvsMuxD4nQyUN5KiLUIxoiM) [[Baidu Netdisk]](https://pan.baidu.com/s/1jkgmBJvQ9IR3abE_7nngIg?pwd=cvpr)
+ [[MEGA]](https://mega.nz/file/61AVQDbC#JWGWyODueoGRv2OV9MwRUvsMuxD4nQyUN5KiLUIxoiM) [[Baidu Netdisk]](https://pan.baidu.com/s/1IR-XVeCdmqqczKD3_vD-Kg?pwd=cvpr)
 
 **Note on Dataset Versioning**
 
@@ -79,5 +79,6 @@ python main_mlzsl.py --config_file configs/sewerml.yml MODEL.DIST_TRAIN False MO
 ```
 
 ## 🙏 Acknowledgements
+
 
 This repo benefits from [RAM](https://github.com/muzairkhattak/multimodal-prompt-learning), [CLIP](https://github.com/xmed-lab/CLIP_Surgery) and [CLIP-Adapter](https://github.com/gaopengcuhk/CLIP-Adapter). Thanks for their wonderful works.
