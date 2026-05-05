@@ -81,4 +81,4 @@ python main_mlzsl.py --config_file configs/sewerml.yml MODEL.DIST_TRAIN False MO
 ## 🙏 Acknowledgements
 
 
-This repo benefits from [RAM](https://github.com/muzairkhattak/multimodal-prompt-learning), [CLIP](https://github.com/xmed-lab/CLIP_Surgery) and [CLIP-Adapter](https://github.com/gaopengcuhk/CLIP-Adapter). Thanks for their wonderful works.
+This repo benefits from [RAM](https://github.com/EricTan7/RAM), [CLIP](https://github.com/openai/CLIP) and [CLIP-Adapter](https://github.com/gaopengcuhk/CLIP-Adapter). Thanks for their wonderful works.
